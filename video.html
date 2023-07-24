@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="video.css">
+    <title>Explore.com</title>
+</head>
+
+<body>
+    <!-- <h1>Explore the Galaxy</h1> -->
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Explore</h2>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="Untitled design (3).mp4" autoplay loop muted></video>
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Never stop</h2>
+            <h3>Exploring the <br> world</h3>
+            <p>See places you have never seen before and let your curiosity rampage!</p>
+            <a href="https://www.travelandleisure.com/trip-ideas/most-beautiful-places-in-the-us">explore</a>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter fa-lg"></a></i></li>
+            <li><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+        </ul>
+
+
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">destination</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">home</a></li>
+
+        </ul>
+    </div>
+
+    <script src="https://kit.fontawesome.com/f7c5f1b5b8.js" crossorigin="anonymous"></script>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showCase = document.querySelector('.showcase');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showCase.classList.toggle('active');
+
+        })
+    </script>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #03a9f4;
+  /* background-color: rgb(255, 170, 0); */
+  mix-blend-mode: overlay;
+}
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+}
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3 {
+  font-size: 4em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover {
+  letter-spacing: 6px;
+}
+.social {
+  position: absolute;
+  bottom: 20px;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li {
+  list-style: none;
+}
+.social li a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  margin-right: 20px;
+  transform: scale(0.5);
+  transition: 0.5;
+}
+
+.social li a:hover {
+  transform: scale(1) translateY(-15px);
+}
+@media (max-width: 891px) {
+  .showcase,
+  .showcaseheader {
+    padding: 40px;
+  }
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 852px) {
+    .showcase,
+    .showcaseheader {
+      padding: 40px;
+    }
+    .text h2 {
+      font-size: 2.5em;
+    }
+  
+    .text h3 {
+      font-size: 2em;
+    }
+    .logo{
+        padding: 0px;
+
+    }
+  }
+.showcase.active {
+  right: 300px;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  position: relative;
+  list-style-type: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.menu ul li a:hover {
+  color: #03a9f4;
+}
+@media (max-width: 416px) {
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        font-size: 1em;
+        position: relative;
+        left: -80px;
+        margin-bottom: 50px;
+    }
+    .toggle{
+        left: 80px;
+    }
+    .showcase.active {
+        right: 247px;
+      }
+      /* .toggle.active{
+      } */
+      .menu ul li a{
+        font-size: 1.1em;
+      }
+}
+
+@media(orientation: landscape) and (max-width: 600px){
+    .text h2, .text h3{
+        font-size: 2.5em;
+    }
+
+    .logo{
+        font-size: 1.2em;
+        position: relative;
+        top: -45px;
+        right: 70px;
+    }
+    .toggle{
+        right: -75px;
+        top: -45px;
+        width: 30px;
+    }
+    .text p{
+        max-width: 50%;
+    }
+}
+    </style>
+</body>
+
+</html>
